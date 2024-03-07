@@ -3,7 +3,7 @@
     <ul>
     <% for (const person of persons) {%>
     <li class="person">
-        <a href="/kitten/<%= person.id %>"> <p><%= person.first_name %> <%= person.last_name %> </p> </a>
+        <a href="<%= base_url %>/person/<%= person.id %>"> <p><%= person.first_name %> <%= person.last_name %> </p> </a>
     </li>
     <% } %>
     </ul>

@@ -1,6 +1,7 @@
 import fs from "fs";
 import express from "express";
 import HomeController from "../controller/home.js";
+import PersonController from "../controller/person.js";
 
 
 const router = express.Router();
@@ -12,8 +13,8 @@ const BASE_URL = `http://${hostname}:${port}`;
 
 router.get('/', HomeController)
 
-/*router.get('/kitten/:id', PersonController)
-
+router.get('/person/:id', PersonController.getPerson)
+/*
 router.get('/add/person', AddPersonController.get)
 router.post('/add/post', AddPersonController.post )
 
