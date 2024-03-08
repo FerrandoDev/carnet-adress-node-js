@@ -3,7 +3,9 @@
     <ul>
     <% for (const person of persons) {%>
     <li class="person">
+        <input type="checkbox" id="<%= person.id %>" name="<%= person.id %>" value="" data-delete>
         <a href="<%= base_url %>/person/<%= person.id %>"> <p><%= person.first_name %> <%= person.last_name %> </p> </a>
+        <a href="<%= base_url %>/person/edit/<%= person.id %>"> <button>EDIT</button> </a>
     </li>
     <% } %>
     </ul>
